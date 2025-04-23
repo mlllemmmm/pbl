@@ -15,10 +15,7 @@ function Main() {
         GET STARTED
         </Button>
 
-        <Button className='btns' buttonStyle='btn--primary'
-        buttonSize='btn--large'>
-        GET STARTED
-        </Button>
+
 
       </div>
     </div>

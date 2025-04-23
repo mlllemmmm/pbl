@@ -1,0 +1,14 @@
+.furniture{
+    width: 99vw;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.card-section{
+    width: 100vw;
+    padding-left: 50px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

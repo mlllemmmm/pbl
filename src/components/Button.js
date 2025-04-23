@@ -1,28 +1,34 @@
 import React from 'react';
 import './Button.css';
-import {Link} from 'react-router-dom';
-const STYLES=['btn--primary','btn--outline']
-const SIZES=['btn--medium','btn--large']
-export const Button = ({
-    children,
-    type,
-    onClick,
-    buttonStyle,
-    buttonSize})=> { 
-    const checkButtonStyle=STYLES.includes(buttonStyle)
-     ? buttonStyle 
-     : STYLES[0];
+import { Link } from 'react-router-dom';
 
-     const checkButtonSize=SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
-    return(
-        <Link to='/sign-up' className='btn-mobile'>
-            <button
-            className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-            onClick={onClick}
-            >
-               {children} 
-               
-            </button>
-        </Link>
-    )
+const STYLES = ['btn--primary', 'btn--outline', 'black-border'];
+const SIZES = ['btn--medium', 'btn--large'];
+
+export const Button = ({
+  children,
+  type,
+  onClick,
+  buttonStyle,
+  buttonSize
+}) => {
+  const checkButtonStyle = STYLES.includes(buttonStyle)
+    ? buttonStyle
+    : STYLES[0];
+
+  const checkButtonSize = SIZES.includes(buttonSize)
+    ? buttonSize
+    : SIZES[0];
+
+  return (
+    <Link to='/shopping-cart' className='btn-mobile'>
+      <button
+        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
+    </Link>
+  );
 };

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import {Button} from './Button';
-
+import cart from "../components/assets/cartimg.jpg";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton]=useState(true);
@@ -54,18 +54,20 @@ window.addEventListener('resize',showButton);
               </Link>
               </li>
               <li className='nav-item'>
-              <Link to='/local' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/local-furniture' className='nav-links' onClick={closeMobileMenu}>
               Local Furniture
               </Link>
               </li>
               <li className='nav-item'>
-              <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
-              Sign-up
+              <Link to='/log-out' className='nav-links' onClick={closeMobileMenu}>
+              Log out
               </Link>
               </li>
 
           </ul>
-          {button && <Button buttonStyle='btn--outline'> SIGN UP</Button>}
+          <Link to ='/shopping-cart'>
+          {button && <Button buttonStyle='btn--outline' > <img src={cart} className='cartbutton'></img></Button>}
+          </Link>
         </div>
       </nav>
     </>
